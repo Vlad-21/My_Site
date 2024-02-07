@@ -1,0 +1,402 @@
+@import './variables/variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: $header-background;
+
+    h1,
+    h2 {
+        color: $text-color;
+        font-family: $karla-font;
+    }
+
+    h1 {
+        font-size: 150px;
+        line-height: 150px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .more_about_me {
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $dark-blue;
+        margin-bottom: 100px;
+        text-decoration: none;
+        font-family: $karla-font;
+        font-size: 15px;
+        color: $white;
+
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}
+
+.title {
+    margin: 0;
+    line-height: 250px;
+    font-size: 250px;
+    color: $text-color;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.next {
+    font-family: $karla-font;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 20px;
+    color: $gray;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about,
+.skills {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    &__description {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        &__my_img {
+            border-radius: 20px;
+            width: 450px;
+            height: 450px;
+        }
+
+        &__me {
+            h3 {
+                font-family: $play-fire-font;
+                font-size: 50px;
+            }
+
+            p {
+                font-family: $karla-font;
+                color: $gray;
+                max-width: 350px;
+                font-size: 16px;
+            }
+        }
+
+        &__skill {
+            width: 180px;
+
+            h3 {
+                font-family: $play-fire-font;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            &__list {
+                list-style: none;
+
+                li {
+                    font-family: $karla-font;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &--img {
+            width: 550px;
+            height: auto;
+            border-radius: 20px;
+        }
+    }
+}
+
+.work-experience {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    &__description {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        flex-direction: row;
+        ul {
+            list-style: none;
+            font-family: $karla-font;
+            color: $dark-blue;
+            li {
+                h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                p {
+                    max-width: 420px;
+                    font-size: 14px;
+                    span {
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 50vh;
+    background: $headre-background-revers;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    ul {
+        margin-top: 100px;
+        list-style: none;
+        width: auto;
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            img {
+                width: 30px;
+                height: auto;
+                margin-right: 20px;
+            }
+            a {
+                font-family: $karla-font;
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+    a {
+        color: $white;
+    }
+}
+
+/* Адаптивність */
+
+@media (max-width: 768px) {
+    header {
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .about,
+    .skills,
+    .work-experience {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1080px) {
+    header {
+        h1 {
+            font-size: 120px;
+            line-height: 120px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 80px;
+            line-height: 80px;
+        }
+    }
+    .title {
+        line-height: 200px;
+        font-size: 200px;
+        color: $text-color;
+        font-weight: 700;
+        z-index: 3;
+    }
+
+    .about__description {
+        flex-direction: column;
+        &__me {
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1040px) {
+    .title {
+        line-height: 150px;
+        font-size: 150px;
+    }
+    .skills {
+        &__description {
+            flex-direction: column;
+            img {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    header {
+        h1 {
+            font-size: 100px;
+            line-height: 100px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    header {
+        h1 {
+            font-size: 80px;
+            line-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    .title {
+        line-height: 100px;
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .work-experience {
+        width: 100%;
+        &__description {
+            flex-direction: column;
+            align-items: center;
+            ul {
+                margin-top: 0;
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .about,
+    .skills {
+        width: 100%;
+    }
+
+    .about {
+        &__description {
+            &__my_img {
+                margin-top: 20px;
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+
+    .skills {
+        &__description {
+            &--img {
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    header {
+        h1 {
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+    .title {
+        line-height: 50px;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+    header {
+        h1 {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+    .title {
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    .about,
+    .skills,
+    .work-experience {
+        height: auto;
+    }
+}

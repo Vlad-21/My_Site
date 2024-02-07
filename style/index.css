@@ -1,0 +1,350 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(#293359, #fff);
+}
+header h1,
+header h2 {
+  color: #f0f0f0;
+  font-family: "Karla", Arial, sans-serif;
+}
+header h1 {
+  font-size: 150px;
+  line-height: 150px;
+  margin-bottom: 10px;
+}
+header h2 {
+  font-size: 100px;
+  line-height: 100px;
+}
+header .more_about_me {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #293359;
+  margin-bottom: 100px;
+  text-decoration: none;
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+header .more_about_me:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0;
+  line-height: 250px;
+  font-size: 250px;
+  color: #f0f0f0;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.next {
+  font-family: "Karla", Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #808080;
+}
+.next:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about,
+.skills {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.about__description,
+.skills__description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.about__description__my_img,
+.skills__description__my_img {
+  border-radius: 20px;
+  width: 450px;
+  height: 450px;
+}
+.about__description__me h3,
+.skills__description__me h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 50px;
+}
+.about__description__me p,
+.skills__description__me p {
+  font-family: "Karla", Arial, sans-serif;
+  color: #808080;
+  max-width: 350px;
+  font-size: 16px;
+}
+.about__description__skill,
+.skills__description__skill {
+  width: 180px;
+}
+.about__description__skill h3,
+.skills__description__skill h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.about__description__skill__list,
+.skills__description__skill__list {
+  list-style: none;
+}
+.about__description__skill__list li,
+.skills__description__skill__list li {
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 25px;
+}
+.about__description--img,
+.skills__description--img {
+  width: 550px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.work-experience {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.work-experience__description {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.work-experience__description ul {
+  list-style: none;
+  font-family: "Karla", Arial, sans-serif;
+  color: #293359;
+}
+.work-experience__description ul li h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.work-experience__description ul li p {
+  max-width: 420px;
+  font-size: 14px;
+}
+.work-experience__description ul li p span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(#fff, #293359);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer ul {
+  margin-top: 100px;
+  list-style: none;
+  width: auto;
+}
+.footer ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer ul li img {
+  width: 30px;
+  height: auto;
+  margin-right: 20px;
+}
+.footer ul li a {
+  font-family: "Karla", Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+.footer a {
+  color: #fff;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  .about,
+  .skills,
+  .work-experience {
+    width: 100%;
+  }
+}
+@media (max-width: 1080px) {
+  header h1 {
+    font-size: 120px;
+    line-height: 120px;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .title {
+    line-height: 200px;
+    font-size: 200px;
+    color: #f0f0f0;
+    font-weight: 700;
+    z-index: 3;
+  }
+  .about__description {
+    flex-direction: column;
+  }
+  .about__description__me h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 1040px) {
+  .title {
+    line-height: 150px;
+    font-size: 150px;
+  }
+  .skills__description {
+    flex-direction: column;
+  }
+  .skills__description img {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 870px) {
+  header h1 {
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 720px) {
+  header h1 {
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .title {
+    line-height: 100px;
+    font-size: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .work-experience {
+    width: 100%;
+  }
+  .work-experience__description {
+    flex-direction: column;
+    align-items: center;
+  }
+  .work-experience__description ul {
+    margin-top: 0;
+  }
+  .work-experience__description ul li {
+    margin-bottom: 10px;
+  }
+  .about,
+  .skills {
+    width: 100%;
+  }
+  .about__description__my_img {
+    margin-top: 20px;
+    width: 90%;
+    height: auto;
+  }
+  .skills__description--img {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 570px) {
+  header h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .title {
+    line-height: 50px;
+    font-size: 50px;
+  }
+}
+@media (max-width: 430px) {
+  header h1 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .title {
+    line-height: 30px;
+    font-size: 30px;
+  }
+  .about,
+  .skills,
+  .work-experience {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
